@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+/* ------------------- grid ------------------ */
+.grid-container {
+	padding-top: 100px;
+	display: grid;
+	grid-template-columns: 300px 600px 300px;
+	grid-auto-rows: minmax(300px, auto);
+	row-gap: 150px;
+	column-gap: 40px;
+	justify-content: center;
+	align-content: center;
+	height: 100vh;
+}
+
+ .grid-item { 
+ 	border: 1px solid #ccc; 
+ } 
+
+.grid-item-1 {
+	grid-column: span 1;
+}
+.grid-item-2 {
+	grid-row: span 1;
+}
+
+.grid-item-3 {
+	grid-row: span 1;
+}
+
+.grid-item-4 {
+	grid-column: span 2;
+	grid-row: span 1;
+}
+.grid-item-5 {
+	grid-row: span 1;
+}
+.grid-item-6 {
+	grid-column: span 2;
+	grid-row: span 1;
+}
+.grid-item-7 {
+	grid-row: span 1;
+}
+.grid-item-8 {
+	grid-column: span 2;
+	grid-row: span 1;
+}
+.grid-item-9 {
+	grid-row: span 1;
+}
+
+/* ------------------- grid ------------------ */
+
+* {
+	font-family: 'Noto Sans KR'
+}
+
+ul {
+	list-style: none;
+}
+
+
+header {
+	position: sticky;
+	top: -32px;
+	padding: 15px;
+	padding-top: 32px;
+	padding-left: 32px;
+	padding-right: 32px;
+	display: flex;
+	justify-content: space-center;
+ 	align-items: center; 
+}
+
+
+.nav {
+	display: inline-block;
+	margin-left: 20px;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.headline {
+    font-size: 18px;
+    margin-top: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    font-weight: 600;
+    float: left;
+    box-sizing: border-box;
+}
+
+.slidebar {
+	padding-left: 0 !important;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.slidebar li a {
+    text-decoration: none;
+    line-height: 25px;
+    display: block;
+    text-transform: uppercase;
+    padding: 15px 55px 16px 20px;
+    font-size: 16px;
+    font-weight: 400;
+    word-break: break-all;
+    font-weight: 600;
+    position: relative;
+    word-break: keep-all;
+    letter-spacing: -0.5px;
+}
+
+h3.menuNm {
+    color: #333;
+    font-size: 24px;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: left;
+    width: 100%;
+    border-bottom: none;
+    position: relative;
+    font-weight: 500;
+}
+
+.subMenu {
+    color: #000;
+    font-family: 'Noto Sans KR';
+    margin: 0;
+    padding: 0;
+    float: left;
+    width: 250px;
+    box-sizing: border-box;
+    z-index: 1;
+    padding-right: 30px;
+    margin-bottom: 0 !important;
+    margin-top: 8px;
+    position: absolute;
+ }
+
+.subMenu .slidebar {
+    padding-left: 0 !important;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.slidebar>li.deepest>a {
+    color: #fff !important;
+    background: #004a98;
+    font-weight: 600;
+    padding-bottom: 13px;
+}
+    
+.bnrSlideTit {
+    font-size: 26px;
+    margin-bottom: 10px;
+    height: 43px;
+}
+
+.loginBtn {
+    display: block;
+    padding: 11px 17px;
+    margin-top: 30px;
+    overflow: hidden;
+    position: relative;
+    vertical-align: middle;
+    text-align: center;
+    color: #004a98;
+    font-size: 16px;
+    font-weight: 600;
+    border: 2px solid #004a98;
+    border-radius: 10px;
+}
+
+.name {
+    font-size: 19px;
+    font-weight: 600;
+    width: 100%;
+    border-bottom: 2px solid #014a99;
+    padding: 15px 0;
+}
+
+.moduleTit {
+    font-size: 26px;
+    color: #333;
+    letter-spacing: -0.5px;
+}
+
+.boardArea {
+    margin-top: 30px;
+    width: 100%;
+    float: left;
+    margin-bottom: 60px;
+   }
+
+.boardArea .mainNew {
+    width: 30%;
+    margin-right: 5%;
+    float: left;
+}
+
+.boardArea .linebrd li .newsTit {
+    width: calc(100% - 100px);
+    float: left;
+    color: #666;
+    font-size: 16px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+ul.linebrd {
+    width: 65%;
+    float: left;
+    padding-left: 0;
+}
+
+.linebrd li .newsdate {
+    font-size: 16px;
+    color: #666;
+    float: right;
+    letter-spacing: -0.5px;
+}    
+
+.rmybox {
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+</style>
+</head>
+<body>
+
+<header>
+	<h1 class="logo">
+	<a href="/index.do" title="홈바로가기">
+	<img src="https://www.kotra.or.kr/module/upload/file/selectImageView.do?atchFileId=20000012146&fileSn=0" id="img_topLogo" alt="KOTRA 무역투자24"></a>
+	</h1>
+
+	<nav>
+	<div class="inner">
+		<ul class="lnb">
+			<li class="nav">사업신청</li>
+			<li class="nav">문의·상담</li>
+			<li class="nav">해외정보</li>
+			<li class="nav">사업소개</li>
+			<li class="nav">공사안내</li>   
+		</ul>
+	</div>
+	</nav>						
+</header>
+<br><br>
+<div class="grid-container">
+	<div class="grid-item grid-item-1">	
+	  <div class="subMenu">
+		<h3 class="menuNm">해외정보</h3>
+		<ul class="slidebar selected tendina" id="submainLeftMn">
+			<li class="deepest">
+				<a href="/subList/20000006759" data-href="menuLinkSeq" data-attr="menuNm" class="on">
+					해외정보 홈</a>               
+			</li>
+			<li>
+			 	<a href="https://www.kotra.or.kr/siteUrlLink.do?siteName=big" target="_blank" title="새창열림" data-href="menuLinkSeq" data-attr="menuNm">
+					트라이빅</a>
+			</li>
+			<li>
+			   	<a href="https://www.kotra.or.kr/siteUrlLink.do?siteName=kn" target="_blank" title="새창열림" data-href="menuLinkSeq" data-attr="menuNm">
+					해외시장뉴스 (해드림)</a>
+			</li>
+			<li>
+				<a href="https://www.kotra.or.kr/siteUrlLink.do?siteName=bk" target="_blank" title="새창열림" data-href="menuLinkSeq" data-attr="menuNm">
+					바잉오퍼 (BK)</a>
+			</li>
+			<li>
+			   	<a href="https://www.kotra.or.kr/siteUrlLink.do?siteName=gep" target="_blank" title="새창열림" data-href="menuLinkSeq" data-attr="menuNm">
+					해외전시회 (GEP)</a>
+			</li>
+			<li>
+			   	<a href="/subList/20000018754" data-href="menuLinkSeq" data-attr="menuNm">
+					무역자료실</a>
+			</li>
+		 </ul>
+	</div>
+	</div>
+					    
+	<div class="grid-item grid-item-2"><h4 class="bnrSlideTit">알림존</h4>
+		<img alt="전기차 허브로 도약하는 인도네시아" src="https://www.kotra.or.kr/module/upload/file/selectImageView.do?atchFileId=20000041986&fileSn=0">
+	</div>
+	
+	<div class="grid-item grid-item-3"><h4 class="name">KOTRA 지식정보</h4>
+		<p class="plzLogin pt30 wd100 fs15 word_kp iprInfo">
+             	로그인을 하시면 개인 맞춤형 (관심국가, 관심품목, 관심산업) 콘텐츠를 보실 수 있습니다.</p>
+        <a href="/loginForm.do" class="loginBtn">회원 로그인</a>
+    </div>							
+
+	<div class="grid-item grid-item-4"><b class="moduleTit">해외시장뉴스</b>
+	 <div class="boardArea">
+	  <div class="mainNew">
+        <div class="imgbox"><img class="wd100" src="http://dream.kotra.or.kr/ajaxa/fileCpnt/fileView.do?gbn=n06&amp;nttSn=196275&amp;atFileSn=91824" alt="" width="200" height="150"></div>
+     	 <p class="headline"><a href="javascript:goToSSODreamKotra('http://dream.kotra.or.kr/kotranews/cms/news/actionKotraBoardDetail.do?SITE_NO=3&amp;MENU_ID=70&amp;CONTENTS_NO=1&amp;bbsGbn=00&amp;bbsSn=322&amp;pNttSn=196275');" title="새창열림">외국 경제단체의 눈을 통해 보는 대만의 사업환경</a></p>
+      </div>
+	  <ul class="linebrd">
+		<li>
+      	  <p class="newsTit"><a href="javascript:goToSSODreamKotra('http://dream.kotra.or.kr/kotranews/cms/news/actionKotraBoardDetail.do?SITE_NO=3&amp;MENU_ID=70&amp;CONTENTS_NO=1&amp;bbsGbn=00&amp;bbsSn=244&amp;pNttSn=196351');" title="새창열림">페루의 비관세장벽, 어떤 것들이 있을까?</a></p>
+     	  <span class="newsdate">2022-08-30</span>
+    	</li>       							          	  
+    	<li>
+       	  <p class="newsTit"><a href="javascript:goToSSODreamKotra('http://dream.kotra.or.kr/kotranews/cms/news/actionKotraBoardDetail.do?SITE_NO=3&amp;MENU_ID=70&amp;CONTENTS_NO=1&amp;bbsGbn=00&amp;bbsSn=245&amp;pNttSn=196294');" title="새창열림">세계 배터리 산업박람회를 통해 본 중국 배터리 산업 현황</a></p>
+       	  <span class="newsdate">2022-08-29</span>
+    	</li>
+     	<li>
+     	  <p class="newsTit"><a href="javascript:goToSSODreamKotra('http://dream.kotra.or.kr/kotranews/cms/news/actionKotraBoardDetail.do?SITE_NO=3&amp;MENU_ID=70&amp;CONTENTS_NO=1&amp;bbsGbn=00&amp;bbsSn=246&amp;pNttSn=196254');" title="새창열림">[기고] 중국에서 출자자본금 미납주주에 대한 강제집행</a></p>
+       	  <span class="newsdate">2022-08-29</span>
+    	</li>
+    	<li>
+      	  <p class="newsTit"><a href="javascript:goToSSODreamKotra('http://dream.kotra.or.kr/kotranews/cms/news/actionKotraBoardDetail.do?SITE_NO=3&amp;MENU_ID=70&amp;CONTENTS_NO=1&amp;bbsGbn=00&amp;bbsSn=246&amp;pNttSn=196320');" title="새창열림">[기고] 중국 법원, 채무자에 대한 강제집행 조치</a></p>
+      	  <span class="newsdate">2022-08-29</span>
+     	</li>
+     	<li>
+      	  <p class="newsTit"><a href="javascript:goToSSODreamKotra('http://dream.kotra.or.kr/kotranews/cms/news/actionKotraBoardDetail.do?SITE_NO=3&amp;MENU_ID=70&amp;CONTENTS_NO=1&amp;bbsGbn=00&amp;bbsSn=245&amp;pNttSn=196156');" title="새창열림">일본 배관자재 유통상사 인터뷰: 한국제품 진입 기회 기대</a></p>
+      	  <span class="newsdate">2022-08-29</span>
+     	</li>
+     </ul>
+   </div>
+   </div> 
+
+	<div class="grid-item grid-item-5">
+	 <div class="bbox box3 rmybox">
+	  <h4 class="titarea">
+              <b>관심국가</b>
+              <span>
+               <b class="selected">미국</b>
+              </span>
+            </h4>
+	 </div>
+	</div>
+	<div class="grid-item grid-item-6">바잉오퍼 Grid Item 6</div>
+	<div class="grid-item grid-item-7">관심품목Grid Item 7</div>
+	<div class="grid-item grid-item-8">전시회 정보 Grid Item 8</div>
+	<div class="grid-item grid-item-9">빅데이터 서비스Grid Item 9</div>
+
+</div>
+
+</body>
+</html>
