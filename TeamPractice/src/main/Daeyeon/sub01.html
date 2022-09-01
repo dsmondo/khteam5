@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+* {
+    font-family: 'Noto Sans CJK KR';
+}
+ 
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, textarea, p, blockquote, th, td, input, select, textarea, button {
+    margin: 0;
+    padding: 0;
+}
+
+dl, ul, ol, menu {
+    list-style: none;
+}
+
+
+/* -------------------------------------------------- */
+
+
+
+/* header ----------------------------------------------- */
+
+.header {
+    width: 100%;
+    height: 45px;
+    background: #eeeeee;
+    border-bottom: 1px solid #dddddd;
+}
+
+.header .headerInner {
+    max-width: 1300px;	
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+
+/* 최상단 메뉴 왼쪽부분 */
+#innerLeft{
+    width: 50%;
+    float: left;
+    vertical-align: middle;
+}
+
+
+#innerLeft>ul li.siteMore a {
+    font-size: 14px;
+ 	line-height: 45px; /* 겉에 div 길이만큼 */
+    color: #555;
+}
+
+
+/* 관리자에서 가져옴 */
+#innerLeft>ul li.siteMore a:after {
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border: 2px solid #333;
+    border-width: 1px 1px 0 0;
+    transform: rotate(135deg);
+    margin-left: 10px;
+    margin-bottom: 4px;
+}
+
+/* 최상단 메뉴 오른쪽부분 */
+
+ul.gnb { 
+    float: right;
+    height: 45px;
+    text-align: right;
+    width: 70%;
+    max-width: 50%;
+    box-sizing: border-box;
+}
+
+ul.gnb li {
+    line-height: 45px;
+    font-size: 14px;
+    text-align: right;
+    display: inline-block;
+}
+
+ul.gnb li a {
+    color: #666;
+    padding: 0px 10px;
+    float: right;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+/*  end header ----------------------------------------------- */
+
+
+/*	start menu ----------------------------------------------- */
+
+.menu {
+    width: 100%;
+    height: 100px;
+    background: #fff;
+    float: left;
+    position: relative;
+}
+
+
+/* inner 메뉴 */
+.menuinner {
+	max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    line-height: 100px;
+}
+
+/* --------------------------------- */
+
+
+/* 로고 부분 */
+.logo {
+    width: 20%;
+    float: left;
+    height: 100px;
+    line-height: 90px;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.menu .logo a img {
+    vertical-align: middle;
+}
+
+/* lnb부분 */
+
+.lnb {
+    width: 80%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    line-height: normal;
+    vertical-align: middle;
+    text-align: right;
+    padding-right: 150px;
+    display: inline-block;
+}
+
+.lnb > li {
+    width: auto !important;
+    vertical-align: middle;
+    box-sizing: border-box;
+    padding-left: 60px;
+    display: inline-block;
+}
+
+/* lnb 안에 li 안에 a 태그 텍스트들 */
+.lnb li a {
+    width: 100%;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 23px;
+    font-weight: 700;
+    display: inline-block;
+}
+
+
+
+.lnb_search {
+    top: 31px;
+    right: 40px;
+    height: 40px;
+}
+
+.lnb_search .btn_search {
+    font-size: 1px;
+    line-height: 1px;
+    float: left;
+    text-indent: -9999px;
+    overflow: hidden;
+    width: 40px;
+    height: 40px;
+}
+
+
+/* 일단 가져옴 */
+/* ::before은 HTML안 앞쪽에 추가하는 가상 요소이다 */
+.lnb_search .btn_search::before {
+    content: "";
+    background: url(image/headIcon.png) #fff;
+    background-position: -148px -1px;
+    font-size: 20px;
+    width: 25px;
+    height: 25px;
+    line-height: 40px;
+    text-indent: 0;
+    position: absolute;
+    left: 8px;
+    top: 8px;
+}
+
+/* 버튼 부분 투명하게 ex) 그래야 위의 before만 도출된다 */
+button {
+    border: 0 none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+
+/*	end menu ----------------------------------------------- */ 
+
+
+
+
+/* -------------------------------------------------- */
+
+
+
+</style>
+
+</head>
+<body>
+
+
+	<!-- 헤더 시작! -->
+	<div class="header"> 
+		<div class="headerInner">
+			<!-- inner 왼쪽 부분 -->
+			<div id="innerLeft">
+			<ul>
+				<li class="siteMore">
+				<a id="moreBtn">KOTRA 사이트더보기</a>
+				</li>
+			</ul>
+			</div>
+		
+			<!-- inner 오른쪽 부분 -->
+			<ul class="gnb Right">
+				<li><a href="주소 써야함"><span>로그인</span></a></li>
+				<li><a href="주소 써야함"><span>회원가입</span></a></li>
+				<li><a href="주소 써야함"><span>사이트맵</span></a></li>
+				<li><a href="주소 써야함"><span>ENGLISH</span></a></li>
+			</ul>
+			
+		</div>
+	</div>
+
+	<!-- 헤더 끝! -->
+	
+	
+	<!-- 메뉴 시작 -->
+
+	<div class="menu">
+	
+		<div class="menuinner">
+		
+			<h1 class="logo">
+				<a href="메인페이지 주소" title="홈바로라기">
+				<img src="image/logo.png" id="img_topLogo" alt="KOTRA 무역투자24">
+				</a>
+			</h1>
+			
+			
+				<ul class="lnb">
+					<li class="bigMenu" >
+						<a href="서브페이지 주소 경로" id="gnb">사업신청</a>
+					</li>
+					
+					<li class="bigMenu" >
+						<a href="서브페이지 주소 경로" id="gnb">문의·상담</a>
+					</li>
+					
+					<li class="bigMenu" >
+						<a href="서브페이지 주소 경로" id="gnb">해외정보</a>
+					</li>
+					
+					<li class="bigMenu" >
+						<a href="서브페이지 주소 경로" id="gnb">사업소개</a>
+					</li>
+					
+					<li class="bigMenu" >
+						<a href="서브페이지 주소 경로" data-type="subPage" id="gnb">공사안내</a>
+					</li>
+					
+					
+				</ul>
+			
+				<div class="lnb_search">
+					<button class="btn_search" type="button" title="검색하기" >검색</button>
+				</div>
+				
+				
+			
+		</div> <!-- inner div -->
+	
+	</div> <!-- manu din -->
+
+<!-- 메뉴 끝! -->
+
+
+
+<!-- 사업신청 시작!! -->
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
