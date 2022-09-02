@@ -11,6 +11,7 @@
 
 ul, li {
 	list-style: none;
+	 padding-left:0px;
 }
 
 table, tr, td {
@@ -37,19 +38,24 @@ table, tr, td {
 	background-color: antiquewhi;
 }
 
- p { 
 
-/*  	color: cornflowerblue;  */
-/* 	font-style: 1px solid blue; */
-/*   	border: 1px solid blue; */
-   	width: 150px; 
-/*   	height: 30px;  */
-/*    	margin: 0;  */
-/*    	padding: 0;  */
- 
- }   
 
-a {	border-style:  1px solid #ccc;	}
+/* .main2 >li> ul > li {	 */ /* 흰동그라미 */
+/* /* 	width: 30%; */ */
+/* 	border:  1px solid red; */
+/* 	padding: 5px; */
+/* }  */
+
+.main1 > li  { 
+	padding-bottom: 50px;
+	padding-top: 20px;
+	border-bottom: 1px solid #ccc;
+}
+
+.main2 > li {
+	box-sizing: content-box;
+	width: 150px;
+}
 
 </style>
 </head>
@@ -87,13 +93,13 @@ a {	border-style:  1px solid #ccc;	}
 <hr>
 
 
-<ul>
+<ul class="main1">
 	<li><!-- 1번 -->
 		<strong>수출상담 및 포럼1</strong>
-		<ul>
+		<ul class="main2">
 			<li><!-- 파랑색 동그라미2 -->
 				<p style="background-color: cornflowerblue">국내 수출상담회</p>
-				<ul><!-- 흰색 동그라미 -->
+				<ul class="main3"><!-- 흰색 동그라미 -->
 					<li><a href="">국내 수출상담회</a></li>
 				</ul>
 			</li>
@@ -123,6 +129,9 @@ a {	border-style:  1px solid #ccc;	}
 				</ul>
 			</li>
 		</ul>	
+		
+	<button type="button" >내용 숨기기</button>
+	
 	</li>
 	
 	<button type="button" >내용 숨기기</button>
