@@ -9,28 +9,67 @@ ul li {
 	list-style: none;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
 .hdmenu ul li {
 	padding-left: 5px;
 	float: left;
 }
 
 .header {
-	height: 45px;
+	width: 100%;
+    height: 45px;
+    position: absolute;
+    z-index: 990;
+    background: #efefef;
+    border-bottom: 1px solid #e5e7ee !important;
+    box-sizing: border-box;
 	text-align: left;
+}
+
+.header .inner {
+	width: 100%;
+    height: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 
 .hdmenu {
 	float: right;
-/* 	height: 45px; */
 	text-align: right;
-	/* padding-right: 39px; */
-	
 	width: 70%;
 	text-align: right;
 	max-width: 30% !important;
 	box-sizing: border-box;
 }
+
+.hdmenu ul {
+	
+	color: #666;
+    font-weight: 400;
+    padding: 0px 20px;
+    width: 100%;
+    height: 100%;
+    float: left;
+    position: relative;
+}
+
+/* 코트라로고 */
+.imglogo { 
+	width: 20%;
+    float: left;
+    height: 100px;
+    padding: 52px 10px;
+/*      text-align: left; */
+    vertical-align: middle;
+	box-sizing: border-box;
+    transition: padding 0.1s;
+ }
 
 
 .menu {
@@ -43,16 +82,27 @@ ul li {
     transition: heigt 0.5s;
 }
 
-.menu .menulist {
+.menulist {
+	width: 80%;
+    height: 100px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    line-height: normal;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: right;
+    padding-right: 150px;
+    margin-top: 70px;
+}
+.menu {
 	width: 100%;
     max-width: 1300px;
     margin: 0 auto;
     box-sizing: border-box;
-    /* height: 120px; */
     line-height: 100px;
     vertical-align: middle;
     text-align: right;
-    /* display: table; */
+	display: table;
     vertical-align: middle;
     position: relative;
 }
@@ -61,21 +111,8 @@ ul li {
 	float: left;
 }
 
-.menulist {
-	width: 80%;
-    height: 100px;
-    /* max-width: 1300px; */
-    margin: 0 auto;
-    box-sizing: border-box;
-    line-height: normal;
-    display: inline-block;
-    vertical-align: middle;
-    text-align: right;
-    padding-right: 150px;
-    margin-top: -5px;
-}
 
-
+/* 7대 대국민 약속 문구 */
 .phr {
 	position: absolute;
 	top: 46%;
@@ -85,16 +122,28 @@ ul li {
 	text-align: center;
 	padding: 50px 0;
 	background: rgba(0, 0, 0, 0.5);
-	margin-top: 600px;
+	margin-top: -100px;
 }
 
+.topbox {
+    width: 100%;
+    float: left;
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    
+}
 .introbg {
 	padding-top: 0;
+	z-index: 0;
 	background: transparent;
 	overflow: hidden;
 	width: 100% !important;
 	
 }
+
 
 .introphr {
 	font-size: 53px;
@@ -195,6 +244,7 @@ ul li {
 <body>
 
 	<div class="header">
+		<div class="inner">
 		<div class="sitemore" style= "width: 30%;">
 			<span>KOTRA 사이트</span>
 		</div>
@@ -210,11 +260,12 @@ ul li {
 				<li><a href=""><span>ENGLISH</span> </a></li>
 			</ul>
 		</div>
+		</div>
 	</div>
 
 	<div class="menu">
 		<div class="menuimg">
-			<h1>
+			<h1 class="imglogo">
 				<a href=""> <img alt="kotra로고"
 					src="resources/image/selectImageView (1).png">
 				</a>
@@ -390,66 +441,39 @@ ul li {
 		</div>
 
 		<div class="footbi">
-			<img alt="bi" src="resources/image/kotraBI.png"> <span
-				class="footphr">무역투자 진흥 & 일자리 창출로 국민경제 발전에 이바지하겠습니다.<br>
+			<img alt="bi" src="resources/image/kotraBI.png"> 
+			<span class="footphr">무역투자 진흥 & 일자리 창출로 국민경제 발전에 이바지하겠습니다.<br>
 				사회적 가치 실현으로 더 나은 사회, 더 밝은 내일을 함께합니다.<br> 경제통상협력으로 우리 기업의 진출을
 				지원합니다.
 			</span>
 		</div>
 	</div>
 
-	<!-- 게시판 만들기 -->
+<!-- 아래쪽 게시판 만들기 -->
 	<div>
-		<ul>
-			<!-- 		<li class="공지사항"></li> -->
-
-			<div>
-				<p>
-					<a href="">공지사항</a>
-				</p>
+		<p><a href="">공지사항</a></p>
 				<ul>
 					<li><a href=""></a>
-						<p>홈페이지 서비스 일시중지 안내(8.27. 10:00~18:00)</p> <span>시스템 정기점검 및
-							안정적인 정보시스템 운영작업으로 로그인 및</span>
+						<p>홈페이지 서비스 일시중지 안내(8.27. 10:00~18:00)</p>
+						<span>시스템 정기점검 및 안정적인 정보시스템 운영작업으로 로그인 및</span>
+					</li>
 				</ul>
-			</div>
-		</ul>
-	</div>
-
-	<div>
-		<ul>
-			<!-- 		<li class="공지사항"></li> -->
-			<div>
-				<p>
-					<a href="">공지사항</a>
-				</p>
-				<ul>
-					<li><a href=""></a>
-						<p>홈페이지 서비스 일시중지 안내(8.27. 10:00~18:00)</p> <span>시스템 정기점검 및
-							안정적인 정보시스템 운영작업으로 로그인 및</span>
-				</ul>
-			</div>
-		</ul>
-	</div>
-
-	<div>
-		<ul>
-			<!-- 		<li class="공지사항"></li> -->
-			<div>
-				<p>
-					<a href="">공지사항</a>
-				</p>
-				<ul>
-					<li><a href=""></a>
-						<p>홈페이지 서비스 일시중지 안내(8.27. 10:00~18:00)</p> <span>시스템 정기점검 및
-							안정적인 정보시스템 운영작업으로 로그인 및</span>
-				</ul>
-			</div>
-		</ul>
 	</div>
 
 
+	<div>
+		<p><a href="">공지사항</a></p>
+		<div>
+			<ul>
+				<li><a href=""></a>
+				<p>홈페이지 서비스 일시중지 안내(8.27. 10:00~18:00)</p> 
+				<span>시스템 정기점검 및 안정적인 정보시스템 운영작업으로 로그인 및</span>
+				</li>
+			</ul>
+		</div>	
+	</div>
 
+<!-- 동영상부분 -->
 	<div>
 		<h4>KOTRA 홍보영상</h4>
 	</div>
@@ -459,16 +483,19 @@ ul li {
 			<b>대국민 7대 윤리약속</b>
 		</h5>
 	</div>
+
+	<div>
 	<a href="/subList/20000005831?tabid=51" title="고객과의 약속">
-		<div>
+
 			<div class="imgbox">
-				<img class="bIcon" src="resources/image/iconBI.png" alt="">
-			</div>
+			<img class="bIcon" src="resources/image/iconBI.png" alt="">
 			<p class="tit bSubContent">대국민 7대 윤리약속</p>
-		</div> <span class="subtit bContent"> KOTRA는 최고의 윤리적인 기관으로<br>
+			</div>
+		 	<span class="subtit bContent"> KOTRA는 최고의 윤리적인 기관으로<br>
 			도약하고자 국민 여러분과 약속합니다
-	</span>
+			</span>
 	</a>
+	</div>
 
 	<div>
 		<h4>정보공개</h4>
@@ -546,9 +573,7 @@ ul li {
 
 		<div>
 			<ul>
-				<li><a href=""> <img alt="WEB접근성"
-						src="resources/image/wamark_20220608.png">
-				</a></li>
+				<li><a href=""><img alt="WEB접근성" src="resources/image/wamark_20220608.png"></a></li>
 			</ul>
 		</div>
 
